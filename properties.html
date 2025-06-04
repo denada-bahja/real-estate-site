@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="logo/nav-logo.png" type="image/png">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Linku per fontet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- navbar fillimi -->
+  <header>
+    <nav id="navbar-scrollspy"
+      class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top p-0 px-4 rounded-bottom-4">
+      <div class="container-fluid">
+        <!-- Logo Left -->
+        <a class="navbar-brand" href="#">
+          <img src="logo/nav-logo.png" class="logo" alt="Logo" height="80">
+        </a>
+
+        <!-- Burger Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Middle Nav Links -->
+          <ul class="navbar-nav mx-auto mb-4 mb-lg-0 gap-4 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" id="scrollspy1" href="kryefaqja.html">Kryefaqja</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="scrollspy2" href="kryefaqja.html">Shërbime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="scrollspy5" href="kryefaqja.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="scrollspy3" href="kryefaqja.html">Rreth Nesh</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="properties.html">Prona</a>
+            </li>
+          </ul>
+
+          <!-- Right Side Links -->
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-4 align-items-center">
+            <li class="nav-item">
+              <div class="btn-contact"><a id="scrollspy6" href="kryefaqja.html">Kontakt</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- navbar fundi -->
+
+  <main class="main">
+    <div class="container">
+      <div class="filters-header d-flex justify-content-between align-items-center ">
+        <h5 class="mb-0">Filtro Pronat</h5>
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <button class="btn btn-outline-secondary btn-sm" onclick="resetFilters()">Pastro Filtrat <i
+              class="fa-solid fa-arrows-rotate ms-1"></i></button>
+        </div>
+      </div>
+
+      <!-- FILTRAT -->
+      <div class="row mb-5 g-3">
+        <div class="col-md-3">
+          <select class="form-select" id="filterType">
+            <option value="">Çfarë po kërkoni?</option>
+            <option value="Blerje">Blerje</option>
+            <option value="Qira">Qira</option>
+            <option value="Shitje">Shitje</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select class="form-select" id="filterCity">
+            <option value="">Të gjitha qytetet</option>
+            <option value="Tiranë">Tiranë</option>
+            <option value="Durrës">Durrës</option>
+            <option value="Vlorë">Vlorë</option>
+            <option value="Shkodër">Shkodër</option>
+            <option value="Elbasan">Elbasan</option>
+            <option value="Korçë">Korçë</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select class="form-select" id="filterPrice">
+            <option value="">Çmimi</option>
+            <option value="0-500">0-500 €</option>
+            <option value="500-1000">500-1000 €</option>
+            <option value="1000-10000">1000-10 000 €</option>
+            <option value="10000-">10 000 €+</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-dark w-100" onclick="filterProperties()">Kërko</button>
+        </div>
+      </div>
+
+      <!-- BUTONAT -->
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <button class="btn btn-outline-dark" onclick="filterByCategory('Bli')">BLI PRONA</button>
+        <button class="btn btn-outline-dark" onclick="filterByCategory('Qera')">MERR ME QERA</button>
+        <button class="btn btn-outline-dark" onclick="window.location.href='#'">SHIT PRONA</button>
+      </div>
+
+      <!-- PRONAT -->
+      <div class="row" id="propertyList"></div>
+    </div>
+  </main>
+
+  <!-- footer fillimi -->
+  <footer id="kontakt" class="footer pt-5 text-light">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- About Us -->
+        <div class="col-md-3">
+          <img src="logo/footer-logo.png" alt="Elevate Estate Logo" class="mb-3" width="120">
+          <p>Ne nuk shesim thjesht prona – ne <br class="d-none d-lg-block"> ndërtojmë lidhje me
+            ëndrrat tuaja.</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h5>Kontakt</h5>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <i class="fa-solid fa-phone me-2"></i>
+              <a href="tel:+12345678900" class="text-light text-decoration-none">+1 234 567 8900</a>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <i class="fa-solid fa-envelope me-2"></i>
+              <a href="mailto:info@elevateestate.al" class="text-light text-decoration-none">info@elevateestate.al</a>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="fa-solid fa-location-dot me-2"></i>
+              <a href="https://www.google.com/maps?q=Tiranë" target="_blank"
+                class="text-light text-decoration-none">Tiranë</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Menu -->
+        <div class="col-md-2">
+          <h5>Menu</h5>
+          <ul class="list-unstyled">
+            <li><a href="kryefaqja.html" class="text-light text-decoration-none d-block mb-1">Kryefaqja</a></li>
+            <li><a href="kryefaqja.html" class="text-light text-decoration-none d-block mb-1">Shërbime</a></li>
+            <li><a href="kryefaqja.html" class="text-light text-decoration-none d-block mb-1">Rreth Nesh</a></li>
+            <li><a href="properties.html" class="text-light text-decoration-none d-block mb-1">Prona</a></li>
+            <li><a href="kryefaqja.html" class="text-light text-decoration-none d-block mb-1">FAQs</a></li>
+            <li><a href="#kontakt" class="text-light text-decoration-none d-block">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-2">
+          <h5>Shërbimet</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none d-block mb-1">Bli Prona</a></li>
+            <li><a href="#" class="text-light text-decoration-none d-block mb-1">Merr me Qera</a></li>
+            <li><a href="#" class="text-light text-decoration-none d-block">Shit Prona</a></li>
+          </ul>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="col-md-2">
+          <h5>Subscribe</h5>
+          <p>Për të marrë përditësime, vendosni email-in tuaj:</p>
+          <form class="footer-form">
+            <input type="email" class="form-control mb-2 bg-transparent text-light border-light"
+              placeholder="Email-i juaj">
+            <button class="footer-btn btn w-100" type="submit">Dërgo</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+
+      <!-- Bottom Footer-->
+      <div
+        class=" d-flex flex-column flex-lg-row justify-content-between align-items-center mt-5 pt-4 border-top border-secondary text-center text-md-start">
+        <div class="mb-3">
+          <p class="mb-0">&copy; <span>2025</span> ElevateEstate. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+
+        <div class="mb-3">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="#" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="list-inline text-md-end">
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Termat dhe Kushtet</a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Politikat e Privatësisë</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+  </footer>
+  <!-- footer fundi -->
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/properties.js"></script>
+</body>
+
+</html>

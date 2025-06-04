@@ -1,0 +1,41 @@
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #f8f9fa;
+    }
+    .property-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .property-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .property-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    .property-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .property-details span {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .property-description {
+      font-size: 1rem;
+      color: #555;
+    }
+    @media (max-width: 576px) {
+      .property-title {
+        font-size: 1.4rem;
+      }
+    }

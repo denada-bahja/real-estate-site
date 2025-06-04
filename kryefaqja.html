@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElevateEstate</title>
+
+  <!-- favicon -->
+   <link rel="icon" href="logo/nav-logo.png" type="image/png">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Linku per fontet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- navbar fillimi -->
+  <header>
+    <nav id="navbar-scrollspy"
+      class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top p-0 px-4 rounded-bottom-4">
+      <div class="container-fluid">
+        <!-- Logo Left -->
+        <a class="navbar-brand" href="#">
+          <img src="logo/nav-logo.png" class="logo" alt="Logo" height="80">
+        </a>
+
+        <!-- Burger Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Middle Nav Links -->
+          <ul class="navbar-nav mx-auto mb-4 mb-lg-0 gap-4 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="kryefaqja.html#kryefaqja">Kryefaqja</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kryefaqja.html#shërbime">Shërbime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kryefaqja.html#faqs">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kryefaqja.html#rreth-nesh">Rreth Nesh</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="properties.html">Prona</a>
+            </li>
+          </ul>
+
+          <!-- Right Side Links -->
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-4 align-items-center">
+            <li class="nav-item">
+              <div class="btn-contact"><a href="kryefaqja.html#kontakt">Kontakt</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- navbar fundi -->
+
+  <main class="main" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-smooth-scroll="true" tabindex="0">
+
+    <!-- Hero fillimi -->
+    <div id="kryefaqja" class="position-relative vh-80 overflow-hidden rounded-4 mx-4" data-aos="fade-up">
+
+      <!-- Background video -->
+      <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover z-n1 rounded-4">
+        <source src="videos/background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Overlay -->
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 rounded-4 z-0"></div>
+
+      <!-- Hero and Filters -->
+      <div class="hero-filters d-flex flex-column position-relative h-100 px-5">
+
+        <!-- Hero Text -->
+        <div class=" z-1 text-center mb-5">
+          <h1 class="fw-bold mb-4 text-white fs-1">
+            <span class="custom-text d-block">Hapësira e</span>
+            <span>
+              <span id="part1" class="text-color"></span>
+              <span class="custom-text ">Tuaja</span>
+            </span>
+          </h1>
+          <blockquote class="blockquote text-white mb-4">
+            Jo vetëm një shtëpi – një jetë e re.
+          </blockquote>
+          <a href="properties.html" class="btn btn-hero btn-lg mt-2 text-white">Shfleto Prona</a>
+        </div>
+
+        <!-- Filters -->
+        <div class="mt-auto z-1 w-100 ">
+          <div class="filters border border-1 rounded-3 shadow-lg bg-dark bg-opacity-50">
+
+            <!-- FILTRAT -->
+            <div class="row m-2 g-3">
+              <div class="col-md-3">
+                <select class="form-select text-light bg-dark bg-opacity-75" id="filterType">
+                  <option value="">Çfarë po kërkoni?</option>
+                  <option value="Blerje">Blerje</option>
+                  <option value="Qira">Qira</option>
+                  <option value="Shitje">Shitje</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select class="form-select text-light bg-dark bg-opacity-75" id="filterCity">
+                  <option value="">Të gjitha qytetet</option>
+                  <option value="Tiranë">Tiranë</option>
+                  <option value="Durrës">Durrës</option>
+                  <option value="Vlorë">Vlorë</option>
+                  <option value="Shkodër">Shkodër</option>
+                  <option value="Elbasan">Elbasan</option>
+                  <option value="Korçë">Korçë</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select class="form-select text-light bg-dark bg-opacity-75" id="filterPrice">
+                  <option value="">Çmimi</option>
+                  <option value="0-500">0-500 €</option>
+                  <option value="500-1000">500-1000 €</option>
+                  <option value="1000-10000">1000-10 000 €</option>
+                  <option value="10000-">10 000 €+</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <button class="btn text-white w-100" onclick="goToFilteredProperties()">Kërko</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Hero fundi -->
+
+    <!-- sherbimet fillimi -->
+    <div id="shërbime" class="services container-fluid slider-wrapper my-5 overflow-hidden px-2" data-aos="fade-left">
+
+      <div class="services-header d-flex justify-content-between align-items-center flex-wrap mx-4">
+
+        <div class="services-titles text-center text-md-start">
+          <h4 class="text-warning">Shërbimet Tona</h4>
+          <h3>Gjeni Njoftime për Shtëpi në Zonën Tuaj</h3>
+        </div>
+
+        <div
+          class="services-btn-more btn btn-warning text-white d-flex align-items-center py-2 px-4 rounded-3 border-0 z-2">
+          <i class="fa-solid fa-house me-2"></i>
+          <a href="properties.html" class="text-white text-decoration-none">Shiko më Shumë</a>
+        </div>
+
+      </div>
+
+      <div class="position-relative mx-lg-5 rounded p-4">
+
+        <div class="d-flex flex-nowrap" id="cardContainer">
+
+          <!-- Karta 1 -->
+          <div class="services-card card shadow-sm border-0 my-2 flex-shrink-0 flex-grow-0">
+
+            <img
+              src="https://images.unsplash.com/photo-1609740699990-436c2cbf7151?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="services-img card-img-top" alt="Garsoniere Tiranë">
+
+            <div class="services-body card-body">
+
+              <div class="label bg-warning text-white px-2 py-1 rounded mb-lg-2 d-inline-block">Qira</div>
+              <div class="rating text-warning mb-lg-2">★★★★☆ <span class="text-danger">4.7 (10)</span></div>
+              <h5 class="card-title">Garsoniere moderne</h5>
+              <p class="text-muted mb-0">📍 Tiranë, Komuna e Parisit</p>
+
+              <div class="details d-flex justify-content-around mb-lg-2 mb-md-1 ">
+                <span>📐 45 m²</span>
+                <span>🛏 1 krevat</span>
+                <span>🛁 1 banjo</span>
+              </div>
+
+              <div class="price text-warning fw-bold mb-2">250 €/muaj</div>
+              <a href="detaje.html?id=1" class="btn btn-sm btn-dark">Detaje</a>
+
+            </div>
+
+          </div>
+
+          <!-- Karta 2 -->
+          <div class="services-card card shadow-sm border-0 my-2 flex-shrink-0 flex-grow-0">
+
+            <img
+              src="https://images.unsplash.com/photo-1643319602530-7425f2168125?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="services-img card-img-top" alt="Vilë Durrës">
+
+            <div class="services-body card-body">
+
+              <div class="label bg-warning text-white px-2 py-1 rounded mb-lg-2 d-inline-block">Shitje</div>
+              <div class="rating text-warning mb-lg-2">★★★★★ <span class="text-danger">5.0 (8)</span></div>
+              <h5 class="card-title">Vilë buzë detit</h5>
+              <p class="text-muted mb-0">📍 Durrës, Plazh</p>
+
+              <div class="details d-flex justify-content-around mb-lg-2 mb-md-1">
+                <span>📐 200 m²</span>
+                <span>🛏 4 krevate</span>
+                <span>🛁 3 banjo</span>
+              </div>
+
+              <div class="price text-warning fw-bold mb-2">180,000 €</div>
+              <a href="detaje.html?id=2" class="btn btn-sm btn-dark">Detaje</a>
+
+            </div>
+
+          </div>
+
+          <!-- Karta 3 -->
+          <div class="services-card card shadow-sm border-0 my-2 flex-shrink-0 flex-grow-0">
+
+            <img
+              src="https://images.unsplash.com/photo-1612320648993-61c1cd604b71?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="services-img card-img-top" alt="Apartament Shkodër">
+
+            <div class="services-body card-body">
+
+              <div class="label bg-warning text-white px-2 py-1 rounded mb-lg-2 d-inline-block">Qira</div>
+              <div class="rating text-warning mb-lg-2">★★★☆☆ <span class="text-danger">3.9 (4)</span></div>
+              <h5 class="card-title">Apartament modern</h5>
+              <p class="text-muted mb-0">📍 Shkodër, Qendër</p>
+
+              <div class="details d-flex justify-content-around mb-lg-2 mb-md-1">
+                <span>📐 70 m²</span>
+                <span>🛏 2 krevate</span>
+                <span>🛁 1 banjo</span>
+              </div>
+
+              <div class="price text-warning fw-bold mb-2">300 €/muaj</div>
+              <a href="detaje.html?id=3" class="btn btn-sm btn-dark">Detaje</a>
+
+            </div>
+
+          </div>
+
+          <!-- Karta 4 -->
+          <div class="services-card card shadow-sm border-0 my-2 flex-shrink-0 flex-grow-0">
+
+            <img
+              src="https://images.unsplash.com/photo-1595832880577-a84565468640?q=80&w=2023&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="services-img card-img-top" alt="Apartament">
+
+            <div class="services-body card-body">
+
+              <div class="label bg-warning text-white px-2 py-1 rounded mb-lg-2 d-inline-block">Shitje</div>
+              <div class="rating text-warning mb-lg-2">★★★★☆ <span class="text-danger">4.4 (7)</span></div>
+              <h5 class="card-title">Apartament</h5>
+              <p class="text-muted mb-0">📍 Vlorë, Lungomare</p>
+
+              <div class="details d-flex justify-content-around mb-lg-2 mb-md-1">
+                <span>📐 90 m²</span>
+                <span>🛏 2 krevate</span>
+                <span>🛁 2 banjo</span>
+              </div>
+
+              <div class="price text-warning fw-bold mb-2">95,000 €</div>
+              <a href="detaje.html?id=4" class="btn btn-sm btn-dark">Detaje</a>
+
+            </div>
+
+          </div>
+
+          <!-- Karta 5 -->
+          <div class="services-card card shadow-sm border-0 my-2 flex-shrink-0 flex-grow-0">
+
+            <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" class="services-img card-img-top"
+              alt="Studio Elbasan">
+
+            <div class="services-body card-body">
+
+              <div class="label bg-warning text-white px-2 py-1 rounded mb-lg-2 d-inline-block">Qira</div>
+              <div class="rating text-warning mb-lg-2">★★★☆☆ <span class="text-danger">3.8 (3)</span></div>
+              <h5 class="card-title">Studio e vogël</h5>
+              <p class="text-muted mb-0">📍 Elbasan, Qendër</p>
+
+              <div class="details d-flex justify-content-around mb-lg-2 mb-md-1">
+                <span>📐 35 m²</span>
+                <span>🛏 1 krevat</span>
+                <span>🛁 1 banjo</span>
+              </div>
+
+              <div class="price text-warning fw-bold mb-2">180 €/muaj</div>
+              <a href="detaje.html?id=5" class="btn btn-sm btn-dark">Detaje</a>
+
+            </div>
+
+          </div>
+
+          <!-- Karta 6 -->
+          <div class="services-card card shadow-sm border-0 my-2 flex-shrink-0 flex-grow-0">
+
+            <img
+              src="https://images.unsplash.com/photo-1638030802076-41493b4764dd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="services-img card-img-top" alt="Shtëpi Korçë">
+
+            <div class="services-body card-body">
+
+              <div class="label bg-warning text-white px-2 py-1 rounded mb-lg-2 d-inline-block">Shitje</div>
+              <div class="rating text-warning mb-lg-2">★★★★★ <span class="text-danger">5.0 (12)</span></div>
+              <h5 class="card-title">Shtëpi tradicionale</h5>
+              <p class="text-muted mb-0">📍 Korçë, Pazari i Vjetër</p>
+
+              <div class="details d-flex justify-content-around mb-lg-2 mb-md-1">
+                <span>📐 150 m²</span>
+                <span>🛏 3 krevate</span>
+                <span>🛁 2 banjo</span>
+              </div>
+
+              <div class="price text-warning fw-bold mb-2">120,000 €</div>
+              <a href="detaje.html?id=6" class="btn btn-sm btn-dark">Detaje</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- sherbimet fundi -->
+
+    <!-- faqs fillimi -->
+    <section id="faqs" class="faq-section container my-5" id="faq">
+      <div class="row g-0 shadow-lg overflow-hidden rounded-4">
+        <!-- Left side -->
+        <div class="col-md-6 faq-left">
+          <div class="left-top" data-aos="fade-right">
+            <h2>FAQs</h2>
+            <h3>Pyetje & Përgjigje</h3>
+          </div>
+          <div class="bottom-left-img" data-aos="fade-up">
+            <img class="graphic-image" src="images/aboutBanner.png" alt="img">
+          </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="col-md-6 faq-right">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h4>Si mund të rezervoj një vizitë për një pronë?</h4>
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Mund të rezervoni një vizitë duke plotësuar formularin e kontaktit në faqen tonë ose duke na telefonuar
+                në numrin tonë të kontaktit. Një anëtar i ekipit tonë do t’ju kontaktojë sa më shpejt.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h4>A janë të verifikuara pronat që listoni?</h4>
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Po, të gjitha pronat e listuara në ElevateEstate janë të verifikuara me dokumentacion të rregullt dhe
+                të kontrolluara nga ekipi ynë ligjor.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h4>A ofroni asistencë në procesin e blerjes apo shitjes së një prone?</h4>
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Po, ne ofrojmë shërbim të plotë ndërmjetësimi, këshillim ligjor dhe mbështetje në çdo hap të procesit –
+                nga kërkimi deri te finalizimi i marrëveshjes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h4>Cilat janë kostot shtesë përveç çmimit të pronës?</h4>
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Kostot mund të përfshijnë taksat noteriale, tarifat e regjistrimit dhe shërbimet shtesë të kërkuara nga
+                klienti. Ekipi ynë do t'ju informojë në detaje për çdo rast.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h4>A mund të listoj një pronë për shitje në faqen tuaj?</h4>
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Po, ju mund të na kontaktoni për të diskutuar listimin e pronës suaj. Ne do të shqyrtojmë
+                dokumentacionin dhe do të krijojmë një prezantim profesional për tërheqjen e blerësve potencialë.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- faqs fundi -->
+
+    <!-- rreth nesh fillimi -->
+    <section class="about-section p-5">
+
+      <h1 id="rreth-nesh" class="about-h1 text-center mb-4" data-aos="fade-up">Rreth Nesh</h1>
+
+      <div class="cards-container d-flex flex-column gap-3 mt-auto mx-auto" id="cardsContainer">
+
+        <div
+          class="about-card d-flex justify-content-between align-items-stretch overflow-hidden rounded-4 bg-white"
+          onclick="expandCard(this)" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="card-content d-flex flex-column justify-flex-start p-4">
+            <div class="card-title fw-bold">Dizajni dhe Përshtatja</div>
+            <div class="card-details mt-2">
+              ElevateEstate është zgjedhja ideale për ata që kërkojnë më shumë sesa thjesht një pronë. Me një qasje të
+              personalizuar, një ekip profesionistësh të përkushtuar dhe një portofol të pasur me prona cilësore, ne
+              ofrojmë një përvojë unike në tregun imobiliar – të ndershme, efikase dhe të frymëzuar nga ëndrrat tuaja.
+            </div>
+          </div>
+
+          <div class="card-image image1 flex-grow-1 object-fit-cover"></div>
+
+        </div>
+
+
+        <div class="about-card d-flex justify-content-between align-items-stretch overflow-hidden rounded-4 bg-white"
+          onclick="expandCard(this)" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="card-content d-flex flex-column justify-flex-start p-4">
+            <div class="card-title fw-bold">Misioni</div>
+            <div class="card-details mt-2">
+              Të ndihmojmë çdo klient të gjejë jo vetëm një pronë të përshtatshme, por një vend që do ta quajë "shtëpi".
+              ElevateEstate ndërton ura besimi ndërmjet njerëzve dhe hapësirave që i përfaqësojnë – me profesionalizëm,
+              transparencë dhe pasion për cilësinë e jetesës.
+            </div>
+          </div>
+
+          <div class="card-image image2 flex-grow-1 object-fit-cover"></div>
+
+        </div>
+
+        <div class="about-card open d-flex justify-content-between align-items-stretch overflow-hidden rounded-4 bg-white"
+          onclick="expandCard(this)" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="card-content d-flex flex-column justify-flex-start p-4">
+            <div class="card-header fw-bold flex-shrink-0 font-size-1.3rem">Vlerat</div>
+
+            <div class="card-body mt-2">
+              <div class="accordion-group flex-column gap-3 mt-3">
+
+                <div class="accordion-item border rounded-2 p-3 bg-light" onclick="toggleAccordion(event, this)">
+
+                  <div class="accordion-title fw-bold">Besim dhe Cilësi</div>
+                  <div class="accordion-content mt-1">
+                    Ne punojmë vetëm me prona të verifikuara, dokumentacion të rregullt dhe informacione të plota për
+                    çdo listim. Që nga apartamentet e reja deri te vilat luksoze apo ambientet komerciale, ofrojmë
+                    cilësi të garantuar dhe shërbim të përkushtuar.
+                  </div>
+
+                </div>
+
+                <div class="accordion-item border rounded-2 p-3 bg-light" onclick="toggleAccordion(event, this)">
+
+                  <div class="accordion-title fw-bold">Përvoja e Klientit</div>
+                  <div class="accordion-content mt-1">
+                    Çdo klient është unik – prandaj ofrojmë këshillim të personalizuar, vizita të organizuara me kujdes
+                    dhe mbështetje të plotë në çdo hap të procesit. Te ElevateEstate, blerja apo shitja e një prone
+                    kthehet në një përvojë të qetë dhe profesionale.
+                  </div>
+
+                </div>
+
+                <div class="accordion-item border rounded-2 p-3 bg-light" onclick="toggleAccordion(event, this)">
+
+                  <div class="accordion-title fw-bold">Lidhja me Stilin e Jetës</div>
+                  <div class="accordion-content mt-1">
+                    Ne nuk ofrojmë thjesht ndërtesa – ne ofrojmë jetë. Duke kuptuar stilin, nevojat dhe dëshirat e
+                    klientit, ndihmojmë në gjetjen e pronës që përfaqëson më së miri identitetin dhe qëllimet e tij.
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="card-image image3 flex-grow-1 object-fit-cover"></div>
+
+        </div>
+
+
+        <div class="about-card d-flex justify-content-between align-items-stretch overflow-hidden rounded-4 bg-white"
+          onclick="expandCard(this)" data-aos="fade-up" data-aos-delay="400">
+
+          <div class="card-content d-flex flex-column justify-flex-start p-4">
+            <div class="card-title fw-bold">Identiteti i Markës</div>
+            <div class="card-details mt-2">
+              ElevateEstate është më shumë se një agjenci – është një partner i besueshëm në udhëtimin tuaj drejt
+              hapësirës ideale. Qoftë për të investuar, për të gjetur një shtëpi të re apo për të filluar një kapitull
+              të ri, ElevateEstate është aty për ta bërë realitetin tuaj të ri… ideal.
+            </div>
+          </div>
+
+          <div class="card-image image4 flex-grow-1 object-fit-cover"></div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- rreth nesh fundi -->
+
+    <!-- form fillimi -->
+    <section id="form" class="container my-5">
+      <div class="row g-0 shadow-lg overflow-hidden rounded-4">
+
+        <!-- Video Column -->
+        <div class="col-md-6">
+          <div class="h-100 overflow-hidden">
+            <video src="videos/form-video.mp4" class="w-100 h-100 object-fit-cover" autoplay loop muted></video>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="col-md-6 bg-dark p-5">
+          <h2 class="mb-4 fs-1 form-text">Ende nuk e keni gjetur atë që kërkoni?</h2>
+          <form>
+            <div class="row mb-3">
+              <div class="col">
+                <input type="text" class="form-control custom-input" placeholder="Emri">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control custom-input" placeholder="Mbiemri">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <input type="text" class="form-control custom-input" placeholder="Dua të...">
+            </div>
+
+            <div class="mb-3">
+              <textarea class="form-control custom-input" rows="4" placeholder="Shënim"></textarea>
+            </div>
+
+            <button type="submit" class="btn fw-bold px-4 py-2 btn-hover">Dërgo</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- form fundi -->
+  </main>
+
+  <!-- footer fillimi -->
+  <footer id="kontakt" class="footer pt-5 text-light">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- About Us -->
+        <div class="col-md-3">
+          <img src="logo/footer-logo.png" alt="Elevate Estate Logo" class="mb-3" width="120">
+          <p>Ne nuk shesim thjesht prona – ne <br class="d-none d-lg-block"> ndërtojmë lidhje me
+            ëndrrat tuaja.</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h5>Kontakt</h5>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <i class="fa-solid fa-phone me-2"></i>
+              <a href="tel:+12345678900" class="text-light text-decoration-none">+1 234 567 8900</a>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <i class="fa-solid fa-envelope me-2"></i>
+              <a href="mailto:info@elevateestate.al" class="text-light text-decoration-none">info@elevateestate.al</a>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="fa-solid fa-location-dot me-2"></i>
+              <a href="https://www.google.com/maps?q=Tiranë" target="_blank"
+                class="text-light text-decoration-none">Tiranë</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Menu -->
+        <div class="col-md-2">
+          <h5>Menu</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none d-block mb-1">Kryefaqja</a></li>
+            <li><a href="#shërbime" class="text-light text-decoration-none d-block mb-1">Shërbime</a></li>
+            <li><a href="#rreth-nesh" class="text-light text-decoration-none d-block mb-1">Rreth Nesh</a></li>
+            <li><a href="properties.html" class="text-light text-decoration-none d-block mb-1">Prona</a></li>
+            <li><a href="#faqs" class="text-light text-decoration-none d-block mb-1">FAQs</a></li>
+            <li><a href="#kontakt" class="text-light text-decoration-none d-block">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-2">
+          <h5>Shërbimet</h5>
+          <ul class="list-unstyled">
+            <li><a href="properties.html" class="text-light text-decoration-none d-block mb-1">Bli Prona</a></li>
+            <li><a href="properties.html" class="text-light text-decoration-none d-block mb-1">Merr me Qera</a></li>
+            <li><a href="#form" class="text-light text-decoration-none d-block">Shit Prona</a></li>
+          </ul>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="col-md-2">
+          <h5>Subscribe</h5>
+          <p>Për të marrë përditësime, vendosni email-in tuaj:</p>
+          <form class="footer-form">
+            <input type="email" class="form-control mb-2 bg-transparent text-light border-light"
+              placeholder="Email-i juaj">
+            <button class="footer-btn btn w-100" type="submit">Dërgo</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+
+      <!-- Bottom Footer-->
+      <div
+        class=" d-flex flex-column flex-lg-row justify-content-between align-items-center mt-5 pt-4 border-top border-secondary text-center text-md-start">
+        <div class="mb-3">
+          <p class="mb-0">&copy; <span>2025</span> ElevateEstate. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+
+        <div class="mb-3">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="#" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="list-inline text-md-end">
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Termat dhe Kushtet</a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Politikat e Privatësisë</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+  </footer>
+  <!-- footer fundi -->
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="js/script.js">
+
+  </script>
+</body>
+
+</html>
